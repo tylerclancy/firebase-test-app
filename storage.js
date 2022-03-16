@@ -27,3 +27,8 @@ const upload = document.getElementById('upload');
 const download = document.getElementById('download');
 const status = document.getElementById('status');
 const image = document.getElementById('image');
+
+// Upload file
+upload.addEventListener('click', (e) => {
+  
+});
