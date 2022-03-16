@@ -20,3 +20,10 @@ const app = initializeApp(firebaseConfig);
 // Create a root reference
 const storage = firebase.storage();
 const storageRef = storage.ref();
+
+// Get UI elements
+const file = document.getElementById('file');
+const upload = document.getElementById('upload');
+const download = document.getElementById('download');
+const status = document.getElementById('status');
+const image = document.getElementById('image');
