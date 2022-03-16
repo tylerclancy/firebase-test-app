@@ -35,3 +35,13 @@ signup.addEventListener('click', (e) => {
 logout.addEventListener('click', (e) => {
   firebase.auth().signOut();
 });
+
+// Login state
+firebase.auth().onAuthStateChanged(firebaseUser => {
+  else {
+    console.log('User is not logged in');
+    logout.style.display = 'none';
+    login.style.display = 'inline';
+    signup.style.display = 'inline';
+  }
+})
