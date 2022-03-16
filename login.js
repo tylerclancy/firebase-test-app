@@ -38,7 +38,12 @@ logout.addEventListener('click', (e) => {
 
 // Login state
 firebase.auth().onAuthStateChanged(firebaseUser => {
-  else {
+  if(firebaseUser) {
+    console.log(firebaseUser);
+    logout.style.display = 'inline';
+    login.style.display = 'none';
+    signup.style.display = 'none';
+  } else {
     console.log('User is not logged in');
     logout.style.display = 'none';
     login.style.display = 'inline';
