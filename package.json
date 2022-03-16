@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "firebase": "^9.6.8"
+  },
+  "name": "firebase-test-app",
+  "description": "Test application to use firebase cloud storage and authentication",
+  "version": "1.0.0",
+  "main": "storage.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylerclancy/firebase-test-app.git"
+  },
+  "author": "Tyler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tylerclancy/firebase-test-app/issues"
+  },
+  "homepage": "https://github.com/tylerclancy/firebase-test-app#readme"
+}
