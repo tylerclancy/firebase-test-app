@@ -30,5 +30,13 @@ const image = document.getElementById('image');
 
 // Upload file
 upload.addEventListener('click', (e) => {
-  
+  // Create a file reference
+  const ref = storageRef.child('globe');
+  let photo = document.getElementById('file').files[0];
+
+  // Upload
+  ref.put(photo).then((snapshot) => {
+    console.log('Uploaded a blob or file!');
+    status.innerHTML = 'Uploaded a blob or file!';
+  });
 });
