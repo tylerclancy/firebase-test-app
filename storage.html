@@ -6,17 +6,31 @@
   <title></title>
   <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 </head>
 
 <body>
-  <input type="file" id="file" name="file" multiple /><br /><br />
-  <input type="submit" id="upload" />
-  <input type="submit" id="download" value="Download" /><br /><br />
-  <div id="status"></div>
-  <br /><br />
-  <img src="" id="image" width="200px" />
+
+  <section class="storage">
+    <input type="file" id="file" name="file" multiple /><br /><br />
+    <input type="submit" id="upload" />
+    <input type="submit" id="download" value="Download" /><br /><br />
+    <div id="status"></div>
+    <br /><br />
+    <img src="" id="image" width="200px" />
+  </section>
+
+  <section class="login">
+    <input id="email" type="email" placeholder="Email"><br>
+    <input id="password" type="password" placeholder="Password"><br><br>
+    <button id="login">Login</button>
+    <button id="signup">SignUp</button>
+    <button id="logout" style="display:none;">Logout</button>
+  </section>
+
 
   <script src="storage.js" type="module"></script>
+  <script src="login.js"></script>
 </body>
 
 </html>
