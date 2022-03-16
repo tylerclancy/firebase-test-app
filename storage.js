@@ -40,3 +40,15 @@ upload.addEventListener('click', (e) => {
     status.innerHTML = 'Uploaded a blob or file!';
   });
 });
+
+// Download file
+download.addEventListener('click', (e) => {
+  // File reference
+  const ref = storage.ref('globe');
+
+  ref.getDownloadURL().then((url) => {
+    // Insert url into an img tag to download
+    image.src = url;
+    status.innerHTML = 'Downloaded a blob or file!';
+  }).catch((error) => console.log(error));
+});
