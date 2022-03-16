@@ -15,3 +15,23 @@ const password = document.getElementById('password');
 const login = document.getElementById('login');
 const signup = document.getElementById('signup');
 const logout = document.getElementById('logout');
+
+// Login
+login.addEventListener('click', (e) => {
+  const auth = firebase.auth();
+  const promise = auth.signInWithEmailAndPassword(email.value, password.value);
+  promise.catch(e => console.log(e.message));
+});
+
+// Sign up
+signup.addEventListener('click', (e) => {
+  // TODO: check for real email
+  const auth = firebase.auth();
+  const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+  promise.catch(e => console.log(e.message));
+});
+
+// logout
+logout.addEventListener('click', (e) => {
+  firebase.auth().signOut();
+});
